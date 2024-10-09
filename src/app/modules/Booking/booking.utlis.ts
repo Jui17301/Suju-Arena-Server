@@ -2,6 +2,7 @@ export function convertTimeTo12HourFormat(hour24: string): string {
   const [hourStr, minuteStr] = hour24.split(':');
 
   let hour = parseInt(hourStr, 10);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const minute = parseInt(minuteStr, 10);
   const suffix = hour >= 12 ? 'PM' : 'AM';
 
@@ -53,6 +54,7 @@ export function timeToMinutes(timeString: string): number {
 
 export function parseTimeTo24HourFormat(timeString: string): number {
   const [time, modifier] = timeString.split(' ');
+  // eslint-disable-next-line prefer-const
   let [hours, minutes] = time.split(':').map(Number);
   if (modifier === 'PM' && hours < 12) {
     hours += 12;

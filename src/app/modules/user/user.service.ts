@@ -59,6 +59,7 @@ const getProfileFromDB = async (id: string) => {
     throw new AppError(httpStatus.BAD_REQUEST, 'No Data Found');
   }
   // removing the isDeleted flag and password  from response
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { isDeleted, password, ...restData } = user.toObject();
   return restData;
 };

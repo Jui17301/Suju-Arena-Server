@@ -34,8 +34,10 @@ const createBookingIntoDb = async (payload: TBooking, user: JwtPayload) => {
     if (!isFacility) {
       throw new AppError(httpStatus.NOT_FOUND, 'Facility Not found');
     }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const st24 = format24Hour(startTime);
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const et24 = format24Hour(endTime);
 
     const pricePerHour = isFacility.pricePerHour;

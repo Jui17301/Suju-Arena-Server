@@ -1,5 +1,6 @@
 import { model } from 'mongoose';
 import { Schema } from 'mongoose';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { string } from 'zod';
 
 const bookingSchema = new Schema(
